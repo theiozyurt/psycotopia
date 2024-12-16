@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:psycotopia/story_brain.dart';
-import 'story.dart';
+import 'firstScenario.dart';
+import 'secondScenario.dart';
 
 void main() {
   runApp(gamepage());
@@ -11,6 +12,7 @@ class gamepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -44,6 +46,8 @@ class gameInterface extends StatefulWidget {
 
 class _gameInterfaceState extends State<gameInterface> {
   story_brain brain = story_brain();
+  firstScenario scenario1 = firstScenario();
+  secondScenario scenario2 = secondScenario();
 
   @override
   Widget build(BuildContext context) {
@@ -54,12 +58,16 @@ class _gameInterfaceState extends State<gameInterface> {
           height: 50.0,
         ),
         Expanded(
-          child: Text(
-            brain.getQuestion(),
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 40.0,
-              color: Colors.white,
+          child: new SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Text(
+              brain.getText(),
+              style: TextStyle(
+                fontFamily: 'Tourney',
+                fontWeight: FontWeight.bold,
+                fontSize: 25.0,
+                color: Colors.white,
+              ),
             ),
           ),
         ),
@@ -69,16 +77,18 @@ class _gameInterfaceState extends State<gameInterface> {
             onPressed: () {
               setState(() {
                 //This is button 1, and always gets odd numbers.
-                brain.optionSelecter(1);
+                brain.mainStory();
+                brain.scenarioSelecter(1);
               });
             },
             style: ButtonStyle(
-              backgroundColor: WidgetStatePropertyAll(Colors.blue),
+              backgroundColor: WidgetStatePropertyAll(Colors.grey),
             ),
             child: Text(
-              brain.secondButton[0],
+              brain.firstButtonGetter(),
               style: TextStyle(
                 fontSize: 25.0,
+                color: Colors.black,
               ),
             ),
           ),
@@ -92,16 +102,18 @@ class _gameInterfaceState extends State<gameInterface> {
             onPressed: () {
               setState(() {
                 //This is button 2, and always gets even numbers.
-                brain.optionSelecter(2);
+                brain.mainStory();
+                brain.scenarioSelecter(2);
               });
             },
             style: ButtonStyle(
-              backgroundColor: WidgetStatePropertyAll(Colors.blue),
+              backgroundColor: WidgetStatePropertyAll(Colors.grey),
             ),
             child: Text(
-              brain.firstButton[0],
+              brain.secondButtonGetter(),
               style: TextStyle(
                 fontSize: 25.0,
+                color: Colors.black,
               ),
             ),
           ),
