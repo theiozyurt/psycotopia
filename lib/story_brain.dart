@@ -1,6 +1,9 @@
+import 'package:flutter/cupertino.dart';
+
 import 'story.dart';
 import 'firstScenario.dart';
 import 'secondScenario.dart';
+import 'package:quickalert/quickalert.dart';
 
 firstScenario scenario1brain = firstScenario();
 secondScenario scenario2brain = secondScenario();
@@ -71,9 +74,43 @@ class story_brain {
   }
 
   void mainStory() {
-    _eventNumber += 1;
     firstButtonNext();
     secondButtonNext();
     getText();
+  }
+
+  void scenarioFlow(int chosedOption) {
+    selectedOption = chosedOption;
+    if (_eventNumber >= 4) {
+      if (chosedOption == 1) {
+        if (_eventNumber % 2 == 1) {
+          _eventNumber += 1;
+        } else if (_eventNumber % 2 == 0) {
+          _eventNumber += 2;
+        }
+      }
+      if (chosedOption == 2) {
+        if (_eventNumber % 2 == 0) {
+          _eventNumber += 3;
+        } else if (_eventNumber % 2 == 1) {
+          _eventNumber += 2;
+        }
+      }
+    } else {
+      _eventNumber += 1;
+    }
+  }
+
+  int getEventNumber() {
+    return _eventNumber;
+  }
+
+  int resetEventNumber() {
+    return _eventNumber = 0;
+  }
+
+  void resetButtons() {
+    _firstButtonNumber = 0;
+    _secondButtonNumber = 0;
   }
 }

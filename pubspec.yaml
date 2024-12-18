@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   colorful_safe_area: ^1.0.0
+  quickalert: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -79,6 +80,10 @@ flutter:
      - family: Tourney
        fonts:
          - asset: fonts/Tourney-VariableFont_wdth,wght.ttf
+
+     - family: VT323
+       fonts:
+         - asset: fonts/VT323-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
