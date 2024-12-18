@@ -1,3 +1,7 @@
+![Ekran görüntüsü 2024-12-18 220101](https://github.com/user-attachments/assets/60302f3d-e490-41ce-8b9a-c83cf9a7bfa5)
+![3](https://github.com/user-attachments/assets/0b56cd03-9230-4792-95b6-d04e7d885755)
+![2](https://github.com/user-attachments/assets/2af57f1d-7012-46f8-a14e-bb5ccf606f5b)
+![1](https://github.com/user-attachments/assets/d92a284a-cd86-43db-b792-44fafc2bc78e)
 # psycotopia
 
 A new Flutter project.
