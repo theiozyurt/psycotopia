@@ -81,7 +81,7 @@ class story_brain {
 
   void scenarioFlow(int chosedOption) {
     selectedOption = chosedOption;
-    if (_eventNumber >= 4) {
+    if (_eventNumber >= 3) {
       if (chosedOption == 1) {
         if (_eventNumber % 2 == 1) {
           _eventNumber += 1;
@@ -107,6 +107,12 @@ class story_brain {
 
   int resetEventNumber() {
     return _eventNumber = 0;
+  }
+
+  void scenarioReset() {
+    _textsOfStory.removeRange(2, 10);
+    firstButton.removeRange(2, 7);
+    secondButton.removeRange(2, 7);
   }
 
   void resetButtons() {

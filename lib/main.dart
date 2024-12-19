@@ -55,6 +55,7 @@ class _gameInterfaceState extends State<gameInterface> {
     isVisibleCasual = true;
     isVisibleFinal = false;
     brain.resetButtons();
+    brain.scenarioReset();
   }
 
   //Button visibility changer
