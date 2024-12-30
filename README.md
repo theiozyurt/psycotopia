@@ -1,3 +1,8 @@
+## It is a basic game that will have new versions.
+
+Let's look at Ali's adventure closer...
+
+
 ![Ekran görüntüsü 2024-12-18 220101](https://github.com/user-attachments/assets/60302f3d-e490-41ce-8b9a-c83cf9a7bfa5)
 ![3](https://github.com/user-attachments/assets/0b56cd03-9230-4792-95b6-d04e7d885755)
 ![2](https://github.com/user-attachments/assets/2af57f1d-7012-46f8-a14e-bb5ccf606f5b)
